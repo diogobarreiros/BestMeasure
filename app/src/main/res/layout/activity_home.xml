@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LinearLayoutHome" >
+
+    <FrameLayout
+        android:id="@+id/menulista"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" />
+
+    <FrameLayout
+        android:id="@+id/menudetalhes"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_margin="7dp"
+        android:layout_weight="2" />
+
+</LinearLayout>

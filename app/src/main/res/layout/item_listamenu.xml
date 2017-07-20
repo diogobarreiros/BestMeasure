@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:id="@+id/fundo">
+
+    <ImageView
+        style="@style/ImageView01"
+        android:id="@+id/imgitemlistamenu"
+        android:contentDescription="@string/app_name"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        style="@style/TextView02"
+        android:id="@+id/nomemenu"
+        android:layout_toRightOf="@+id/imgitemlistamenu"
+        android:textIsSelectable="true" />
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorAccent" >
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            style="@style/TextView03"
+            android:text="@string/bemvindo" />
+
+        <ImageView
+            style="@style/ImageView01"
+            android:id="@+id/imgMenu" />
+
+        <TableRow
+            android:id="@+id/tbrSelecao"
+            android:visibility="invisible">
+            <TextView
+                style="@style/TextView01"
+                android:text="@string/selecao" />
+
+            <TextView
+                android:id="@+id/selecao"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="35sp"
+                android:layout_marginLeft="15dip"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbrDescricao"
+            android:visibility="invisible">
+            <TextView
+                style="@style/TextView01"
+                android:text="@string/descricao" />
+
+            <TextView
+                android:id="@+id/descricaomenu"
+                android:layout_width="500dp"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_marginLeft="15dip"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <ImageButton
+            style="@style/ImageButton01"
+            android:id="@+id/imgBtnIniciar"
+            android:src="@drawable/logo"
+            android:contentDescription="@string/iniciar"
+            android:backgroundTint="@color/azul"
+            android:visibility="invisible" />
+    </TableLayout>
+</ScrollView>
