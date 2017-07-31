@@ -49,11 +49,11 @@
         </TableRow>
 
         <ImageButton
-            style="@style/ImageButton01"
             android:id="@+id/imgBtnIniciar"
-            android:src="@drawable/logo"
+            style="@style/ImageButton01"
+            android:backgroundTint="@color/azulplay"
             android:contentDescription="@string/iniciar"
-            android:backgroundTint="@color/azul"
+            android:src="@drawable/play"
             android:visibility="invisible" />
     </TableLayout>
 </ScrollView>
