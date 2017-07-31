@@ -68,14 +68,10 @@ public class DetalhesMenuFragment extends Fragment {
             this.selecao.setText(menu.getNome());
             this.descricaomenu.setText(menu.getDescricao());
 
-            switch (menu.getImagem()){
-                case "ESTETICA":
-                    this.imgMenu.setImageResource(R.drawable.logo);
-                case "IDFIT":
-                    this.imgMenu.setImageResource(R.drawable.logo);
-                default:
-                    this.imgMenu.setImageResource(R.drawable.logo);
-            }
+            if(menu.getImagem().equals("ESTETICA"))
+                imgMenu.setImageResource(R.drawable.icon_estetic);
+            else if(menu.getImagem().equals("IDFIT"))
+                imgMenu.setImageResource(R.drawable.icon_idfit);
         }
     }
 

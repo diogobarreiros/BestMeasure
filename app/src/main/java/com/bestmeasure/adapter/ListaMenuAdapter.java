@@ -64,14 +64,10 @@ public class ListaMenuAdapter extends BaseAdapter {
 
         ImageView imgMenu = (ImageView) view.findViewById(R.id.imgitemlistamenu);
 
-        switch (menu.getImagem()){
-            case "ESTETICA":
-                imgMenu.setImageResource(R.drawable.logo);
-            case "IDFIT":
-                imgMenu.setImageResource(R.drawable.logo);
-            default:
-                imgMenu.setImageResource(R.drawable.logo);
-        }
+        if(menu.getImagem().equals("ESTETICA"))
+            imgMenu.setImageResource(R.drawable.icon_estetic);
+        else if(menu.getImagem().equals("IDFIT"))
+            imgMenu.setImageResource(R.drawable.icon_idfit);
 
         fundo.setOnClickListener(new View.OnClickListener() {
             @Override
