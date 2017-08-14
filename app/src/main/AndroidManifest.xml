@@ -24,8 +24,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CameraActivity" />
+        <activity android:name=".HomeActivity" />
         <activity android:name=".CamEsteticActivity" />
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name="com.bestmeasure.main.CamIdFitActivity"></activity>
     </application>
 
 </manifest>

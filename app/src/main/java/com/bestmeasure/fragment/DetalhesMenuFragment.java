@@ -1,5 +1,6 @@
 package com.bestmeasure.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,8 +11,11 @@ import android.widget.ImageView;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import com.bestmeasure.activity.CamEsteticActivity;
+import com.bestmeasure.activity.HomeActivity;
 import com.bestmeasure.activity.R;
 import com.bestmeasure.domain.entity.Menu;
+import com.bestmeasure.main.CamIdFitActivity;
 
 /**
  * Classe responsável por carregar detalhes do menu.
@@ -26,6 +30,7 @@ public class DetalhesMenuFragment extends Fragment {
     private ImageButton imgBtnIniciar;
     private TableRow tbrDescricao;
     private TableRow tbrSelecao;
+    private static HomeActivity activity;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -54,24 +59,30 @@ public class DetalhesMenuFragment extends Fragment {
             this.tbrDescricao.setVisibility(View.VISIBLE);
             this.imgBtnIniciar.setVisibility(View.VISIBLE);
 
-            this.imgBtnIniciar.setOnClickListener(new View.OnClickListener() {
+            if(menu.getImagem().equals("ESTETICA")) {
+                imgMenu.setImageResource(R.drawable.icon_estetic);
+                this.imgBtnIniciar.setOnClickListener(new View.OnClickListener() {
 
-                @Override
-                public void onClick(View v) {
-                    /* TODO - tela para iniciar item selecionado
-                    NumberPickerDialog dialog = new NumberPickerDialog(AdicionarContaProdutoTask.getContext(), -1, 1, true);
-                    dialog.setOnNumberSetListener(AdicionarContaProdutoTask.getActivity());
-                    dialog.show();*/
-                }
-            });
+                    @Override
+                    public void onClick(View v) {
+                        Intent camEstetic = new Intent(activity, CamEsteticActivity.class);
+                        activity.startActivity(camEstetic);
+                    }
+                });
+            }else if(menu.getImagem().equals("IDFIT")){
+                imgMenu.setImageResource(R.drawable.icon_idfit);
+                this.imgBtnIniciar.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        Intent camIdfit = new Intent(activity, CamIdFitActivity.class);
+                        activity.startActivity(camIdfit);
+                    }
+                });
+            }
 
             this.selecao.setText(menu.getNome());
             this.descricaomenu.setText(menu.getDescricao());
-
-            if(menu.getImagem().equals("ESTETICA"))
-                imgMenu.setImageResource(R.drawable.icon_estetic);
-            else if(menu.getImagem().equals("IDFIT"))
-                imgMenu.setImageResource(R.drawable.icon_idfit);
         }
     }
 
@@ -86,5 +97,9 @@ public class DetalhesMenuFragment extends Fragment {
         this.imgBtnIniciar = (ImageButton) layout.findViewById(R.id.imgBtnIniciar);
         this.tbrSelecao = (TableRow) layout.findViewById(R.id.tbrSelecao);
         this.tbrDescricao = (TableRow) layout.findViewById(R.id.tbrDescricao);
+    }
+
+    public static void setActivity(HomeActivity activity) {
+        DetalhesMenuFragment.activity = activity;
     }
 }

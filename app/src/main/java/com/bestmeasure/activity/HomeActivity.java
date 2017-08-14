@@ -1,11 +1,9 @@
 package com.bestmeasure.activity;
 
+import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
-import com.bestmeasure.activity.R;
 import com.bestmeasure.domain.entity.Menu;
 import com.bestmeasure.fragment.DetalhesMenuFragment;
 import com.bestmeasure.fragment.ListaMenuFragment;
@@ -21,6 +19,10 @@ public class HomeActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        if (savedInstanceState == null) {
+            DetalhesMenuFragment.setActivity(this);
+        }
     }
 
     @Override
