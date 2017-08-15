@@ -42,6 +42,7 @@ public class CamEsteticActivity extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
     static final int REQUEST_TAKE_PHOTO = 1;
     static String mCurrentPhotoPath;
+    static boolean primeiraVez = true;
 
     private void getPermissions() {
 
@@ -92,7 +93,15 @@ public class CamEsteticActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             try {
-                ImageView imagem = (ImageView)findViewById(R.id.imagem);
+                int idImagem = 0;
+                if(primeiraVez){
+                    idImagem = R.id.imagem1;
+                    primeiraVez = false;
+                }else {
+                    idImagem = R.id.imagem2;
+                    primeiraVez = true;
+                }
+                ImageView imagem = (ImageView)findViewById(idImagem);
                 Bitmap bm1 = BitmapFactory.decodeStream(getContentResolver().openInputStream(Uri.parse(mCurrentPhotoPath)));
                 imagem.setImageBitmap(bm1);
             }catch(FileNotFoundException fnex){

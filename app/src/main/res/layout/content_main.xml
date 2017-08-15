@@ -8,18 +8,56 @@
     tools:context="com.bestmeasure.activity.CamEsteticActivity"
     tools:showIn="@layout/activity_cam_estetic">
 
-    <ImageView
-        android:id="@+id/imagem"
-        android:contentDescription="Foto tirada"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintRight_toLeftOf="parent"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="parent"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:layout_width="600dp"
+                android:layout_height="600dp"
+                android:layout_gravity="center">
+                <ImageView
+                    android:id="@+id/imagem1"
+                    android:layout_width="500dp"
+                    android:layout_height="500dp"
+                    android:contentDescription="Foto tirada"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_constraintBottom_creator="1"
+                    tools:layout_constraintLeft_creator="1"
+                    tools:layout_constraintRight_creator="1"
+                    tools:layout_constraintTop_creator="1"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="600dp"
+                android:layout_height="600dp"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/imagem2"
+                    android:layout_width="500dp"
+                    android:layout_height="500dp"
+                    android:contentDescription="Foto tirada"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_constraintBottom_creator="1"
+                    tools:layout_constraintLeft_creator="1"
+                    tools:layout_constraintRight_creator="1"
+                    tools:layout_constraintTop_creator="1"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+        </TableRow>
+
+    </TableLayout>
 
 </android.support.constraint.ConstraintLayout>

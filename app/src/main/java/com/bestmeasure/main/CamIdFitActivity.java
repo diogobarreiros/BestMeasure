@@ -93,7 +93,7 @@ public class CamIdFitActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             try {
-                ImageView imagem = (ImageView)findViewById(R.id.imagem);
+                ImageView imagem = (ImageView)findViewById(R.id.imagem1);
                 Bitmap bm1 = BitmapFactory.decodeStream(getContentResolver().openInputStream(Uri.parse(mCurrentPhotoPath)));
                 imagem.setImageBitmap(bm1);
             }catch(FileNotFoundException fnex){
