@@ -42,7 +42,7 @@ public class CamEsteticActivity extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
     static final int REQUEST_TAKE_PHOTO = 1;
     static String mCurrentPhotoPath;
-    static boolean primeiraVez = true;
+    static int imagemCarrega = 1;
 
     private void getPermissions() {
 
@@ -94,12 +94,18 @@ public class CamEsteticActivity extends AppCompatActivity {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             try {
                 int idImagem = 0;
-                if(primeiraVez){
+                if(imagemCarrega == 1){
                     idImagem = R.id.imagem1;
-                    primeiraVez = false;
-                }else {
+                    imagemCarrega = 2;
+                }else if(imagemCarrega == 2){
                     idImagem = R.id.imagem2;
-                    primeiraVez = true;
+                    imagemCarrega = 3;
+                }else if(imagemCarrega == 3){
+                    idImagem = R.id.imagem3;
+                    imagemCarrega = 4;
+                }else if(imagemCarrega == 4){
+                    idImagem = R.id.imagem4;
+                    imagemCarrega = 1;
                 }
                 ImageView imagem = (ImageView)findViewById(idImagem);
                 Bitmap bm1 = BitmapFactory.decodeStream(getContentResolver().openInputStream(Uri.parse(mCurrentPhotoPath)));

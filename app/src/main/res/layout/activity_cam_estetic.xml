@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.bestmeasure.activity.CamEsteticActivity">
 
-    <include layout="@layout/content_main" />
+    <include layout="@layout/content_estetic" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

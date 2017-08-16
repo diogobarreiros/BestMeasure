@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.bestmeasure.activity.CamEsteticActivity"
     tools:showIn="@layout/activity_cam_estetic">
@@ -17,34 +18,14 @@
             android:layout_height="fill_parent" >
 
             <LinearLayout
-                android:layout_width="600dp"
-                android:layout_height="600dp"
+                android:layout_width="1000dp"
+                android:layout_height="900dp"
+                android:background="@drawable/photoimage"
                 android:layout_gravity="center">
                 <ImageView
                     android:id="@+id/imagem1"
-                    android:layout_width="500dp"
-                    android:layout_height="500dp"
-                    android:contentDescription="Foto tirada"
-                    app:layout_constraintBottom_toTopOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:layout_constraintBottom_creator="1"
-                    tools:layout_constraintLeft_creator="1"
-                    tools:layout_constraintRight_creator="1"
-                    tools:layout_constraintTop_creator="1"
-                    android:layout_gravity="center"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="600dp"
-                android:layout_height="600dp"
-                android:layout_gravity="center">
-
-                <ImageView
-                    android:id="@+id/imagem2"
-                    android:layout_width="500dp"
-                    android:layout_height="500dp"
+                    android:layout_width="900dp"
+                    android:layout_height="800dp"
                     android:contentDescription="Foto tirada"
                     app:layout_constraintBottom_toTopOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"

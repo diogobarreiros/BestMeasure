@@ -15,7 +15,7 @@ import com.bestmeasure.activity.CamEsteticActivity;
 import com.bestmeasure.activity.HomeActivity;
 import com.bestmeasure.activity.R;
 import com.bestmeasure.domain.entity.Menu;
-import com.bestmeasure.main.CamIdFitActivity;
+import com.bestmeasure.activity.CamIdFitActivity;
 
 /**
  * Classe responsável por carregar detalhes do menu.
